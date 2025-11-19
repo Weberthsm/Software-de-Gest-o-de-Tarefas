@@ -1,0 +1,20 @@
+Objetivo
+Liste ideias de testes exploratórios que podem ser válidos para minha API de Software de Gestão de Tarefas.
+
+Contexto
+- Funcionalidades que a minha API possui:
+- Funcionalidades que a minha API possui: 1) Cadastro de Usuário, 2) Login de Usuário, 3) Cadastro de Tarefas, 4) Editar Tarefas,
+5) Listar Tarefas e 5) Marcar Tarefa como Concluída
+
+- A API será desenvolvida com o estilo de arquitetura REST.
+- Heurísticas estão mencionadas no arquivo "Heurísticas.txt"
+
+Regras
+- Pense em testes exploratórios como sendo formas de avaliar um software com base no que está além dos requisitos.
+
+Exemplo
+- Testar Registro de Microempreendedores com as Heurística de Testes de Strings e Ataques de Tipos de Dados 
+- Testar a API dessa aplicação com a Heurística VADER 
+
+Formato
+- Lista de test charters segundo o formato proposto por Elizabeth Hendrickson: Explore a funcionalidade <funcionalidade>, com as heurísticas <heuristicas>, para descobrir se <o que descobrir>

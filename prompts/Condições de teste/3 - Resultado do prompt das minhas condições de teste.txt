@@ -1,0 +1,71 @@
+
+## US01 — Cadastro de Usuário
+
+| ID | Condição | Resultado Esperado | Camada |
+|---:|---|---|---|
+| 1 | Validar preenchimento de todos os campos obrigatórios (nome, e-mail, senha) | Impedir cadastro quando houver campos obrigatórios ausentes | Web |
+| 2 | Validar formato de e-mail | Impedir cadastro com e-mail inválido | Web |
+| 3 | Garantir unicidade de e-mail | Impedir cadastro com e-mail já utilizado | API |
+| 4 | Verificar política de senha (mín. 8 caracteres, letras e números) | Impedir cadastro com senha fora do requisito | Web |
+| 5 | Confirmar senha igual à senha informada | Impedir cadastro quando confirmação não coincidir | Web |
+| 6 | Armazenar senha de forma criptografada | Persistir senha criptografada | API |
+| 7 | Redirecionar para tela de login após cadastro bem-sucedido | Exibir tela de login | Web |
+
+---
+
+## US02 — Login de Usuário
+
+| ID | Condição | Resultado Esperado | Camada |
+|---:|---|---|---|
+| 1 | Validar existência de usuário cadastrado | Impedir login para usuário inexistente | API |
+| 2 | Validar combinação e-mail/senha | Impedir acesso com credenciais inválidas | API |
+| 3 | Considerar senha armazenada de forma criptografada | Validar autenticação sem expor a senha | API |
+| 4 | Estabelecer sessão/autorização após sucesso | Permitir acesso às funcionalidades do usuário | API |
+| 5 | Exibir mensagem de erro clara no insucesso | Informar falha de autenticação sem vazar detalhes | Web |
+
+---
+
+## US03 — Cadastro de Tarefas
+
+| ID | Condição | Resultado Esperado | Camada |
+|---:|---|---|---|
+| 1 | Impedir cadastro sem título | Não realizar o cadastro | Web |
+| 2 | Permitir cadastro com título válido | Realizar cadastro com sucesso | Web |
+| 3 | Aceitar dados opcionais (descrição, data prevista) quando informados | Registrar tarefa com todos os dados válidos | Web |
+| 4 | Permitir cadastro apenas com obrigatórios válidos | Realizar cadastro com sucesso | Web |
+| 5 | Rejeitar data prevista anterior à data atual | Não realizar o cadastro | Web |
+| 6 | Associar tarefa ao usuário autenticado | Registrar vínculo correto criador⇄tarefa | API |
+
+---
+
+## US04 — Editar Tarefas
+
+| ID | Condição | Resultado Esperado | Camada |
+|---:|---|---|---|
+| 1 | Restringir edição ao criador da tarefa | Impedir edição por outros usuários | API |
+| 2 | Impedir remoção do título na edição | Bloquear salvamento sem título | Web |
+| 3 | Atualizar metadado de “última modificação” | Registrar data/hora da alteração | API |
+| 4 | Impedir mudança de status para “Concluída” via edição | Rejeitar alteração de status nesta funcionalidade | API |
+
+---
+
+## US05 — Listar Tarefas
+
+| ID | Condição | Resultado Esperado | Camada |
+|---:|---|---|---|
+| 1 | Restringir listagem às tarefas do usuário logado | Exibir somente tarefas do próprio usuário | API |
+| 2 | Ordenar conforme regra definida (criação ou conclusão) | Exibir lista ordenada corretamente | Web |
+| 3 | Filtrar por status disponível (pendente, concluída) | Exibir resultados conforme filtro aplicado | Web |
+| 4 | Pesquisar tarefas pelo título | Exibir resultados compatíveis com o termo | Web |
+
+---
+
+## US06 — Marcar Tarefa como Concluída
+
+| ID | Condição | Resultado Esperado | Camada |
+|---:|---|---|---|
+| 1 | Restringir alteração de status ao criador | Impedir mudança por usuários não autorizados | API |
+| 2 | Registrar data/hora ao concluir | Persistir timestamp de conclusão | API |
+| 3 | Permitir alternar status entre “Pendente” e “Concluída” | Atualizar status conforme ação do usuário | API |
+| 4 | Evidenciar status nas listagens | Exibir claramente o status atual | Web |
+

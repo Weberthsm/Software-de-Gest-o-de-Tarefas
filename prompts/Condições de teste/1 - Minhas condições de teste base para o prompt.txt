@@ -1,0 +1,21 @@
+### US03 - Cadastro de Tarefas
+
+| ID | Condição | Resultado Esperado | Camada |
+|----|-----------|--------------------|---------|
+
+| 1  | Cadastrar tarefa sem título.| Não realizar o cadastro | Web |
+
+| 2  | Cadastrar tarefa com título | realizar cadastro com sucesso | Web |
+
+| 3  | Cadastrar tarefa informando dados opcionais, preenchendo os demais campos obrigatórios.| Realizar cadastro com todos os dados  | WEB |
+
+| 4  | Preencher apenas com dados obrigatórios válidos.| realizar cadastro com sucesso | Web |
+
+| 5  | Definir Data prevista para conclusão anterior à data atual  |Não deve realizar o cadastro| WEB |
+
+| 6  | Não informar uma Data prevista para conclusão anterior  | Deve realizar o cadastro| WEB |
+
+| 7  |  Cadastrar tarefa associada ao usuário que a criou| sucesso | API |
+
+| 8  |  Tarefa  associada a um usuário diferente do que a criou. | falha | API |
+

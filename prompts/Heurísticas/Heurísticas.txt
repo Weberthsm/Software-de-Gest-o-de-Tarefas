@@ -1,0 +1,46 @@
+Heurísticas de Teste
+Baseado no material da Test Obsessed, Test Heuristics Cheat Sheet Heuristics & Frameworks, com ideias de Elisabeth Hendrickson, James Lyndsay, and Dale Emery. 
+Ataques de Tipos de Dados
+Nome da Heurística	Descrição/Exemplo
+Nome longo	Testar nomes com mais de 255 caracteres.
+Caracteres especiais no nome	Testar nomes com caracteres como espaço, *, ?, /, ,
+Nome inexistente	Tentar acessar ou referenciar um nome que não existe no sistema.
+Nome já existente	Inserir um nome que já está em uso.
+Sem espaços	Garantir que o nome não possui espaços.
+Espaço mínimo	Validar nomes com o menor espaço permitido.
+Protegido contra gravação	Testar nomes que não podem ser sobrescritos.
+Indisponível	Tentar acessar um nome indisponível.
+Bloqueado	Testar nomes bloqueados ou restritos.
+Em máquina remota	Validar nomes localizados em máquinas remotas.
+Corrompido	Testar arquivos ou nomes corrompidos.
+Tempo limite (timeout)	Simular tempo limite ao acessar arquivos.
+Diferença de horários entre máquinas	Verificar impacto de diferenças nos fusos horários.
+Dias inválidos	Inserir datas como 30 de fevereiro ou 31 de setembro.
+Formatos de data	Testar diferentes formatos como "5 de junho de 2001", "06/05/2001", "06-05-01".
+Testes de Strings
+Nome da Heurística	Descrição/Exemplo
+Strings longas	Testar entradas de 255, 256, ou 1000+ caracteres.
+Caracteres acentuados	Testar com caracteres como à, á, â, ã, ä, ç, è, é, ê, ë.
+Caracteres asiáticos	Validar entrada de caracteres asiáticos.
+Caracteres especiais e delimitadores	Usar caracteres como ", ',
+Em branco	Inserir valores em branco.
+Espaços no início ou fim	Testar espaços em excesso antes ou depois das strings.
+Injeção de SQL	Inserir comandos como 'SELECT * FROM customer'.
+Testes de UI
+Nome da Heurística	Descrição/Exemplo
+Botão Voltar	Testar se o botão "voltar" exibe mensagens de "expirado" ou duplica transações.
+Atualizar página	Validar o comportamento ao atualizar a página.
+Manipular URL	Alterar ou remover parâmetros da URL para encontrar vulnerabilidades.
+Desativar JavaScript	Verificar se o sistema funciona corretamente sem JavaScript.
+Validação de HTML e CSS	Usar ferramentas como validator.w3.org e jigsaw.w3.org.
+Sabedoria em Testes
+Nome da Heurística	Descrição/Exemplo
+Testes como experimentos	Testes servem para revelar informações e responder perguntas sobre o sistema.
+Falhas agrupadas	Grandes falhas frequentemente aparecem juntas.
+Adote abordagem contrária	Teste o que o sistema "não deveria fazer".
+Heurísticas Gerais
+Nome da Heurística	Descrição/Exemplo
+CRUD	Garantir que operações de criar, ler, atualizar e deletar mantêm a integridade dos dados.
+Siga os Dados	Mapear relações de dependência como "Cliente possui Faturas".
+Interrupções	Simular interrupções como reinício, timeout, logout.
+
