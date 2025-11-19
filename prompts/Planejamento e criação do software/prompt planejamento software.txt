@@ -1,0 +1,38 @@
+Ideia: um software de gestão de tarefas onde possa criar as suas tarefas e marca-las como concluída.
+
+Funcionalidades:
+
+login de usuario
+cadastro de tarefa,
+Editar suas tarefas
+Marcar suas como concluída
+
+
+1) Objetivo
+Crie uma user story para cada funcionalidade do meu Software de gestão de tarefas.
+
+2) Contexto
+- Uma História de Usuário é a prática ágil mais utilizada para capturar necessidades e requisitos e descrever os Itens do Backlog do Produto. É ótimo usar o modelo de História de Usuário: Como <um usuário>, eu quero <funcionalidade>, para que <problema a ser resolvido, necessidade> + Regras de negócio.
+- A seguir estão as funcionalidades que farão parte do meu software: 1) cadastro de tarefas 2) Login de usuário 3) editar tarefas 4) Marcar suas como concluída
+
+3) Regras
+- Gere apenas as user stories e implemente regras de negócio para cada uma das user stories
+
+4) Exemplo
+Funcionalidade: Cadastro de tarefas
+Como um usuario
+Eu quero ser capaz de me registrar
+Para que eu possa fazer a gestão de tarefas
+
+Regras:
+- Não pode haver duplicidade de usuarios
+
+5) Formato
+Lista de User Stories.
+
+
+
+
+
+
+

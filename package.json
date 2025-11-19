@@ -1,0 +1,35 @@
+{
+  "name": "software-de-gestao-de-tarefas",
+  "version": "1.0.0",
+  "description": "API REST para gestão de tarefas com autenticação JWT e documentação Swagger.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "mocha \"test/**/*.spec.js\" --recursive --timeout 10000 --require test/config/setup.js",
+    "test:report": "mocha \"test/**/*.spec.js\" --recursive --timeout 10000 --require test/config/setup.js --reporter mochawesome --reporter-options reportDir=reports/mochawesome,reportFilename=api-tests"
+  },
+  "keywords": [
+    "express",
+    "jwt",
+    "swagger",
+    "tarefas"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.4.1",
+    "dotenv": "^16.4.5",
+    "mocha": "^10.4.0",
+    "mochawesome": "^7.1.3",
+    "nodemon": "^3.1.7",
+    "supertest": "^7.1.1"
+  }
+}
