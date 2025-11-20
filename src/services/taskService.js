@@ -19,7 +19,8 @@ const validateDueDate = (dueDate) => {
 };
 
 const createTask = ({ userId, title, description, dueDate }) => {
-  if (!title) {
+  const normalizedTitle = (title || '').trim();
+  if (!normalizedTitle) {
     throw new AppError('Título da tarefa é obrigatório.', 400);
   }
 
@@ -28,7 +29,7 @@ const createTask = ({ userId, title, description, dueDate }) => {
   const task = {
     id: uuid(),
     userId,
-    title,
+    title: normalizedTitle,
     description: description || null,
     dueDate: dueDate || null,
     status: 'Pendente',
@@ -48,13 +49,14 @@ const updateTask = ({ taskId, userId, title, description, dueDate }) => {
     throw new AppError('Tarefa não encontrada.', 404);
   }
 
-  if (!title) {
+  const normalizedTitle = (title || '').trim();
+  if (!normalizedTitle) {
     throw new AppError('Título da tarefa não pode ficar em branco.', 400);
   }
 
   validateDueDate(dueDate);
 
-  task.title = title;
+  task.title = normalizedTitle;
   task.description = description || null;
   task.dueDate = dueDate || null;
   task.updatedAt = new Date().toISOString();

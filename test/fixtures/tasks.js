@@ -28,5 +28,7 @@ module.exports = {
   invalidTitleCases,
   invalidDueDateCases,
   futureDate,
-  pastDate
+  pastDate,
+  validStatuses: ['Pendente', 'Concluída'],
+  invalidStatus: 'Em Progresso'
 };
