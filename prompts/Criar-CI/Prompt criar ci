@@ -1,0 +1,12 @@
+
+Objetivo:
+Implementar a execução dos testes funcionais de API Rest na pipeline do GithubActions.
+
+Contexto:
+- Os testes funcionais foram criados com mocha, chai e supertest e são executados a partir do comando npm test
+- GuthubActions é um mecanismo de integração continua do Github que é configurado a partir de um arquivo yml que fica na raiz do próprio repositório da aplicação
+
+Regras:
+- Quero executar os testes a cada vez que houver uma nova tentativa de merge na branch main, seja merge direto ou via Pull Request
+- Antes de executar os testes, precisamos subir a API através do comando npm start, de modo que os testes só rodem após ela estar de pé.
+- Garanta que a api esteja rodando, verificando se ela está de pé. Não simplesmente colocando um tempo de espera.
