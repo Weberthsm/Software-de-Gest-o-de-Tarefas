@@ -1,0 +1,13 @@
+Objetivo:
+Implementar testes de performance de API do K6 com base no teste funcional "cadastra usuário com dados válidos"
+
+Contexto:
+- Testes de performance são testes que avaliam, dentre outros, o tempo de responsa de um ou alguns endpoints.
+- Testes funcionais avaliam o comportamente do software e sua aderência ao requisito (ou regra de negócio).
+- O teste "Deve registrar um novo usuário com sucesso"faz uso de mocha, supertest e chai para avaliar o registro de usuários através de um endpoint.
+
+Regras:
+- Os testes de performance devem ser armazenados na pasta test/k6 dentro de uma subpasta com o nome da funcionalidade a ser testada
+- Os emails dos usuários devem ser únicos, por isso iremos gerar variações com base no timestamp, de modo a não conflitar.
+- Cada endpoint deve obedecer o threshold de até 200 ms para o percentil de 95 quando chamado por 30 usuários simultâneos no período de 60 segundos.
+- Isole dados constantes como a BASE_URL por exemplo em um arquivo a parte.

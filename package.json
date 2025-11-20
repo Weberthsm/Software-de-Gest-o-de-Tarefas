@@ -7,7 +7,8 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "test": "mocha \"test/**/*.spec.js\" --recursive --timeout 10000 --require test/config/setup.js",
-    "test:report": "mocha \"test/**/*.spec.js\" --recursive --timeout 10000 --require test/config/setup.js --reporter mochawesome --reporter-options reportDir=reports/mochawesome,reportFilename=api-tests"
+    "test:report": "mocha \"test/**/*.spec.js\" --recursive --timeout 10000 --require test/config/setup.js --reporter mochawesome --reporter-options reportDir=reports/mochawesome,reportFilename=api-tests",
+    "k6:register": "k6 run test/k6/auth/register.k6.js"
   },
   "keywords": [
     "express",
